@@ -30,8 +30,14 @@ curl -X POST -H "Content-Type: application/json" localhost:3000/register -d '{ "
 curl -X POST -H "Content-Type: application/json" localhost:3000/login -d '{ "username": "juanma", "password": "12345" }'
 ```
 
+## GET w/o JWT
+
+```
+curl localhost:3000/private
+```
+
 ## Auth w/ JWT
 
 ```
-curl --header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.po9twTrX99V7XgAk5mVskkiq8aa0lpYOue62ehubRY4" http://localhost:3000/home
+curl localhost:3000/data --header "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjU5YTgxOTNhMzQxMGE1MDc0MGM2YTBmNyIsInVzZXJuYW1lIjoianVhbm1hIiwiaWF0IjoxNTA0MTkxNTQwfQ.LCqJpJmj75kDXq5U__hEYmmOJxTkxan-FxmBX-Yd5Po"
 ``

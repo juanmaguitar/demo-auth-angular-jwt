@@ -5,7 +5,7 @@ const SECRET = process.env.SECRET
 
 const jwtOptions = {
   secretOrKey: SECRET,
-  jwtFromRequest: ExtractJwt.fromAuthHeader()
+  jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken()
 }
 
 const strategy = new Strategy( jwtOptions, (jwt_payload, done) => {
