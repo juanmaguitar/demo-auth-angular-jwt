@@ -1,6 +1,8 @@
-const User = require(__base + '/models/User')
+/* global __base */
+const path = require('path')
+const User = require(path.join(__base, 'models/User'))
 
-function handleRegister(req, res) {
+function handleRegister (req, res) {
   const { username, password } = req.body
 
   const user = new User({username})
@@ -11,7 +13,6 @@ function handleRegister(req, res) {
     }
     res.json({ success: true, msg: 'Successful created new user.' })
   })
-
 }
 
 module.exports = handleRegister

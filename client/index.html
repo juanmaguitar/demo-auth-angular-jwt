@@ -1,17 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="MyApp">
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
   <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
-  <h1>Hello World!!</h1>
-  <h2>Welcome to the world of JWT's</h2>
-  <script src="bower_components/angular/angular.min.js"></script>
-  <script src="bower_components/angular-route/angular-route.min.js"></script>
-  <script type="text/javascript">
 
-  </script>
+  <ng-view></ng-view>
+
+  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="/bower_components/angular-route/angular-route.min.js"></script>
+
+  <!-- MAIN -->
+  <script src="/app/app.js"></script>
+
+  <!-- SERVICES -->
+  <script src="/app/services/AuthService.js"></script>
+
+  <!-- ROUTES -->
+    <!-- /login -->
+    <script src="/app/routes/login/controller.js"></script>
+    <script src="/app/routes/login/config.js"></script>
+
+    <!-- /register -->
+    <script src="/app/routes/register/controller.js"></script>
+    <script src="/app/routes/register/config.js"></script>
+
 </body>
 </html>
