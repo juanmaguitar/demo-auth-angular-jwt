@@ -4,21 +4,27 @@
   <meta charset="UTF-8">
   <title>Document</title>
   <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/bower_components/angular-toastr/dist/angular-toastr.min.css">
 </head>
 <body>
-
-  <ng-view></ng-view>
+  <div class="container">
+    <ng-view></ng-view>
+  </div>
 
   <script src="/bower_components/jquery/dist/jquery.min.js"></script>
   <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="bower_components/angular/angular.min.js"></script>
   <script src="/bower_components/angular-route/angular-route.min.js"></script>
+  <script src="/bower_components/angular-toastr/dist/angular-toastr.tpls.min.js"></script>
 
   <!-- MAIN -->
   <script src="/app/app.js"></script>
 
   <!-- SERVICES -->
   <script src="/app/services/AuthService.js"></script>
+  <script src="/app/services/StorageService.js"></script>
+  <script src="/app/services/ApiService.js"></script>
+  <script src="/app/services/AuthInterceptor.js"></script>
 
   <!-- ROUTES -->
     <!-- /login -->
@@ -28,6 +34,10 @@
     <!-- /register -->
     <script src="/app/routes/register/controller.js"></script>
     <script src="/app/routes/register/config.js"></script>
+
+    <!-- /dashboard -->
+    <script src="/app/routes/dashboard/controller.js"></script>
+    <script src="/app/routes/dashboard/config.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,17 @@
+/* global angular */
+(function () {
+  angular.module('MyApp')
+    .factory('StorageService', StorageService)
+
+  function StorageService ($window) {
+    function saveToken (token) {
+      $window.localStorage.setItem('authToken', token)
+    }
+
+    function getToken () {
+      return $window.localStorage.getItem('authToken')
+    }
+
+    return { saveToken, getToken }
+  }
+})()

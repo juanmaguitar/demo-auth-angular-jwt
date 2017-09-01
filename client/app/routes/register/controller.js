@@ -3,11 +3,14 @@
   angular.module('MyApp')
     .controller('RegisterCtrl', RegisterCtrl)
 
-  function RegisterCtrl (AuthService) {
+  function RegisterCtrl (AuthService, toastr) {
     this.register = (e) => {
       e.preventDefault()
       AuthService.register(this.username, this.password)
-        .then(console.log)
+        .then(data => {
+          if (data.success) toastr.success(data.msg)
+          else toastr.error(data.msg)
+        })
     }
   }
 })()

@@ -3,9 +3,9 @@
   angular.module('MyApp')
     .config(function ($routeProvider) {
       $routeProvider
-        .when('/register', {
-          templateUrl: '/app/routes/register/template.html',
-          controller: 'RegisterCtrl',
+        .when('/dashboard', {
+          templateUrl: '/app/routes/dashboard/template.html',
+          controller: 'DashboardCtrl',
           controllerAs: 'ctrl'
         })
     })
