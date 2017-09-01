@@ -3,7 +3,12 @@
   angular.module('MyApp')
     .controller('DashboardCtrl', DashboardCtrl)
 
-  function DashboardCtrl (ApiService) {
+  function DashboardCtrl ($rootScope, ApiService, AuthService, $location) {
+
+    if (!AuthService.isLoggedIn()) {
+      $location.path('/login')
+    }
+    
     ApiService.getPrivateData()
       .then(data => { this.privateData = data })
 

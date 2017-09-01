@@ -6,7 +6,8 @@
         .when('/dashboard', {
           templateUrl: '/app/routes/dashboard/template.html',
           controller: 'DashboardCtrl',
-          controllerAs: 'ctrl'
+          controllerAs: 'ctrl',
+          secure: true
         })
     })
 })()

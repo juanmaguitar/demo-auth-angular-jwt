@@ -12,6 +12,10 @@
       return $window.localStorage.getItem('authToken')
     }
 
-    return { saveToken, getToken }
+    function removeToken () {
+      $window.localStorage.removeItem('authToken')
+    }
+
+    return { saveToken, getToken, removeToken }
   }
 })()
